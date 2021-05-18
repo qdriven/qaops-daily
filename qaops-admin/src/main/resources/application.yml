@@ -1,0 +1,55 @@
+server:
+  port: 9090
+  shutdown: graceful
+#  undertow:
+
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    cache: false
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  aop:
+    proxy-target-class: true
+  config:
+    import: classpath:tops.yml
+  application:
+    name: "@artifactId@"
+    package-time: "@package-time@"
+  web:
+    resources:
+      chain:
+        strategy:
+          content:
+            enabled: true
+            paths: "/**"
+  boot:
+    admin:
+      client:
+        # 服务端 url
+        url: http://127.0.0.1:9091
+        instance:
+          # 客户端实例 url
+          service-url: http://127.0.0.1:9090
+          prefer-ip: true
+          # 客户端实例名称
+          name: tops-admin-service
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        # 暴漏的接口 - 所有接口
+        include: "*"
+#mybatis-plus:
+#  type-aliases-package: io.qdriven.*.*.entity
+#  mapper-locations: classpath:mapper/*/*.xml
+#  configuration:
+#    jdbc-type-for-null: null
+#  global-config:
+#    banner: false
+#    db-config:
+#      select-strategy: not_empty
