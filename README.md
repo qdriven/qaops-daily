@@ -22,3 +22,10 @@ A Quality Assurance Daily Work Tools for Productivity.
 - [] jenkins integration
 - [] sonar integration
 - [] Data Portal
+
+## Data Monitoring
+
+- [] Daily Job for Data Checking
+
+
+## Spring Cloud Integration
