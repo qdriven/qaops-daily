@@ -7,7 +7,6 @@
         <module>qaops-admin-server</module>
         <module>qaops-admin</module>
         <module>qaops-supplement</module>
-        <module>qaops-blog</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
